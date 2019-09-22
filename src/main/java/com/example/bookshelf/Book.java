@@ -2,11 +2,20 @@ package com.example.bookshelf;
 
 public class Book {
     private long id;
-    private String title;
-    private String author;
-    private Integer pagesSum;
-    private Integer yearOfPublished;
-    private String publishingHouse;
+    private int amount;
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+//private String title;
+   // private String author;
+    //private Integer pagesSum;
+   // private Integer yearOfPublished;
+    //private String publishingHouse;
 
 
     public long getId() {
@@ -17,7 +26,7 @@ public class Book {
         this.id = id;
     }
 
-    public String getTitle() {
+    /*public String getTitle() {
         return title;
     }
 
@@ -55,5 +64,5 @@ public class Book {
 
     public void setPublishingHouse(String publishingHouse) {
         this.publishingHouse = publishingHouse;
-    }
+    }*/
 }

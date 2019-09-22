@@ -24,8 +24,8 @@ public class BookController {
 
     private final static String BOOK_ID_PARAM_NAME = "bookId";
 
-    private BookStorage bookStorage = new StaticListBookStorageImpl();
-    //private BookStorage bookStorage = new PostgresBookStorageImpl();
+    //private BookStorage bookStorage = new StaticListBookStorageImpl();
+    private BookStorage bookStorage = new PostgresBookStorageImpl();
 
     public Response serveGetBookRequest (IHTTPSession session)  {
 

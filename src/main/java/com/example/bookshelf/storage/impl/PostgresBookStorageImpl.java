@@ -47,11 +47,11 @@ public class PostgresBookStorageImpl implements BookStorage {
             if (resultSet.next()){
                 Book book = new Book();
                 book.setId(resultSet.getLong("book_id"));
-                book.setTitle(resultSet.getString("title"));
-                book.setAuthor(resultSet.getString("author"));
-                book.setPagesSum(resultSet.getInt("page_sum"));
-                book.setYearOfPublished(resultSet.getInt("year_of_published"));
-                book.setPublishingHouse(resultSet.getString("publishing_house"));
+               // book.setTitle(resultSet.getString("title"));
+               // book.setAuthor(resultSet.getString("author"));
+               // book.setPagesSum(resultSet.getInt("page_sum"));
+               // book.setYearOfPublished(resultSet.getInt("year_of_published"));
+               // book.setPublishingHouse(resultSet.getString("publishing_house"));
 
                 return book;
             }
@@ -80,11 +80,11 @@ public class PostgresBookStorageImpl implements BookStorage {
             while (resultSet.next()){
                 Book book = new Book();
                 book.setId(resultSet.getLong("book_id"));
-                book.setTitle(resultSet.getString("title"));
-                book.setAuthor(resultSet.getString("author"));
-                book.setPagesSum(resultSet.getInt("page_sum"));
-                book.setYearOfPublished(resultSet.getInt("year_of_published"));
-                book.setPublishingHouse(resultSet.getString("publishing_house"));
+               // book.setTitle(resultSet.getString("title"));
+              //  book.setAuthor(resultSet.getString("author"));
+              //  book.setPagesSum(resultSet.getInt("page_sum"));
+               // book.setYearOfPublished(resultSet.getInt("year_of_published"));
+               // book.setPublishingHouse(resultSet.getString("publishing_house"));
 
                 books.add(book);
             }
@@ -108,11 +108,11 @@ public class PostgresBookStorageImpl implements BookStorage {
             preparedStatement = connection.prepareStatement(sqlInsertBook);
 
             preparedStatement.setLong(1, book.getId());
-            preparedStatement.setString(2, book.getTitle());
-            preparedStatement.setString(3, book.getAuthor());
-            preparedStatement.setInt(4, book.getPagesSum());
-            preparedStatement.setInt(5, book.getYearOfPublished());
-            preparedStatement.setString(6, book.getPublishingHouse());
+           // preparedStatement.setString(2, book.getTitle());
+           // preparedStatement.setString(3, book.getAuthor());
+           // preparedStatement.setInt(4, book.getPagesSum());
+           // preparedStatement.setInt(5, book.getYearOfPublished());
+           // preparedStatement.setString(6, book.getPublishingHouse());
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
